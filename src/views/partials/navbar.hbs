@@ -1,0 +1,24 @@
+<div class="container-width">
+  <header class="header">
+    <a href="/"><img
+        class="nav-logo"
+        src="https://sa.kapamilya.com/absnews/abscbnnews/media/abs-cbnnews/a_images/thumbnails/011614_rfm.jpg"
+        alt=""
+      /></a>
+
+    <nav class="nav">
+      <a href="/about" class="nav-link">About RFM</a>
+
+      {{#if userName}}
+        <a href="/profile" class="nav-link">Profile {{userName}}</a>
+        <a href="/auth/logout" class="nav-link">Logout</a>
+      {{else}}
+        <a href="/auth/signup" class="nav-link">Register</a>
+        <a href="/auth/signin" class="nav-link">Login</a>
+      {{/if}}
+    </nav>
+    <button class="header-button">
+      <a  class="header-link__tel" href="tel:12345678">Позвонить</a>
+    </button>
+  </header>
+</div>

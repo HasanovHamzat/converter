@@ -1,0 +1,35 @@
+<div class="container-register">
+
+  <ul>
+    <form id="editForm" data-entryid={{userId}}>
+      <li>
+        First Name:
+        {{userName}}
+        <input name='name' class="forform" value={{userName}} />
+      </li>
+      <li>
+        Last Name:
+        {{userSurname}}
+        <input name='surName' class="forform" value={{userSurname}} />
+      </li>
+      <li>
+        Email:
+        {{userEmail}}
+        <input name='email' class="forform" value={{userEmail}} />
+      </li>
+      <button type="button" class="btn btn-primary btn-lg" id="editButton">Edit
+        Profile</button>
+    </form>
+  </ul>
+    <h3>Отконвертированные файлы:</h3>
+  <ul data-type-filelinks>
+
+    {{#each files}}
+    <li>
+      {{!-- получаем массив имя всех файлов. Files: --}}
+      <a data-id="{{this.id}}">{{this.path}}</a>
+    </li>
+    {{/each}}
+  </ul>
+</div>
+<script defer src="/js/download.js"></script>
